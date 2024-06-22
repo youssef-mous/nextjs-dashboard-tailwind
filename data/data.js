@@ -1,112 +1,151 @@
-export const data = [
-  {
-    id: 1,
-    name: {
-      first: 'John',
-      last: 'Smith',
-    },
-    total: 2795.95,
-    status: 'On Hold',
-    method: 'PayPal',
-    date: '15 Minutes ago',
-  },
-  {
-    id: 2,
-    name: {
-      first: 'Chris',
-      last: 'Adams',
-    },
-    total: 1195.95,
-    status: 'Processing',
-    method: 'PayPal',
-    date: '23 Minutes ago',
-  },
-  {
-    id: 3,
-    name: {
-      first: 'Sarah',
-      last: 'Smith',
-    },
-    total: 495.85,
-    status: 'Completed',
-    method: 'Visa',
-    date: '1 Hour ago',
-  },
-  {
-    id: 4,
-    name: {
-      first: 'Joseph',
-      last: 'Choo',
-    },
-    total: 150.45,
-    status: 'Processing',
-    method: 'MasterCard',
-    date: '1 Hour ago',
-  },
-  {
-    id: 5,
-    name: {
-      first: 'Steve',
-      last: 'Harding',
-    },
-    total: 175.25,
-    status: 'On Hold',
-    method: 'PayPal',
-    date: '2 Hour ago',
-  },
-  {
-    id: 6,
-    name: {
-      first: 'Laura',
-      last: 'Croft',
-    },
-    total: 1295.75,
-    status: 'Completed',
-    method: 'Check',
-    date: '3 Hour ago',
-  },
-  {
-    id: 7,
-    name: {
-      first: 'Michael',
-      last: 'Jones',
-    },
-    total: 89.95,
-    status: 'Completed',
-    method: 'MasterCard',
-    date: '3 Hour ago',
-  },
-  {
-    id: 8,
-    name: {
-      first: 'James',
-      last: 'Bond',
-    },
-    total: 689.45,
-    status: 'Completed',
-    method: 'Visa',
-    date: '7 Hour ago',
-  },
-  {
-    id: 9,
-    name: {
-      first: 'Haley',
-      last: 'Whiting',
-    },
-    total: 14.99,
-    status: 'Completed',
-    method: 'PayPal',
-    date: '1 Day ago',
-  },
-  {
-    id: 10,
-    name: {
-      first: 'Tim',
-      last: 'Thomas',
-    },
-    total: 218.99,
-    status: 'Completed',
-    method: 'MasterCard',
-    date: '1 Day ago',
-  },
-];
+export const data ={
+  "monthlySales": [
+      {
+          "month": "2024-01",
+          "monthlySales": 963131.65,
+          "cumulativeSales": 963131.65
+      },
+      {
+          "month": "2024-02",
+          "monthlySales": 893591.44,
+          "cumulativeSales": 1856723.0899999999
+      },
+      {
+          "month": "2024-03",
+          "monthlySales": 945713.48,
+          "cumulativeSales": 2802436.57
+      },
+      {
+          "month": "2024-04",
+          "monthlySales": 931965.37,
+          "cumulativeSales": 3734401.94
+      },
+      {
+          "month": "2024-05",
+          "monthlySales": 934720.7,
+          "cumulativeSales": 4669122.64
+      },
+      {
+          "month": "2024-06",
+          "monthlySales": 366933.71,
+          "cumulativeSales": 5036056.35
+      }
+  ],
+  "productSales": [
+      {
+          "productName": "Ball Recognize",
+          "avgPrice": 456.58000000000004,
+          "totalSales": 597439.01,
+          "quantitySold": 1219
+      },
+      {
+          "productName": "Instead Where",
+          "avgPrice": 540.7,
+          "totalSales": 650613.71,
+          "quantitySold": 1275
+      },
+      {
+          "productName": "Several With",
+          "avgPrice": 667.1,
+          "totalSales": 654127.97,
+          "quantitySold": 12820
+      },
+      {
+          "productName": "Base Agent",
+          "avgPrice": 530.31,
+          "totalSales": 618478.68,
+          "quantitySold": 1214
+      },
+      {
+          "productName": "Become Data",
+          "avgPrice": 919.99,
+          "totalSales": 615779.56,
+          "quantitySold": 7344
+      },
+      {
+          "productName": "Indicate Prevent",
+          "avgPrice": 765.2,
+          "totalSales": 637134.37,
+          "quantitySold": 1269
+      },
+      {
+          "productName": "Chance Thank",
+          "avgPrice": 493.1,
+          "totalSales": 639590.94,
+          "quantitySold": 8925
+      },
+      {
+          "productName": "Find Art",
+          "avgPrice": 33.18,
+          "totalSales": 622892.11,
+          "quantitySold": 4968
+      }
+  ],
+  "categorySales": [
+      {
+          "category": "Toys",
+          "totalSales": 2494284.72
+      },
+      {
+          "category": "Books",
+          "totalSales": 1251566.98
+      },
+      {
+          "category": "Electronics",
+          "totalSales": 650613.71
+      },
+      {
+          "category": "Clothing",
+          "totalSales": 639590.94
+      }
+  ],
+  "countrySales": [
+      {
+          "category": "Swaziland",
+          "totalSales": 1020550.52
+      },
+      {
+          "category": "Costa Rica",
+          "totalSales": 1017026.56
+      },
+      {
+          "category": "Palestinian Territory",
+          "totalSales": 1016465.4
+      },
+      {
+          "category": "Syrian Arab Republic",
+          "totalSales": 1000984.02
+      },
+      {
+          "category": "El Salvador",
+          "totalSales": 981029.85
+      }
+  ],
+  "monthlyTotalSales": [
+      {
+          "month": "2024-01",
+          "totalSales": 963131.65
+      },
+      {
+          "month": "2024-02",
+          "totalSales": 893591.44
+      },
+      {
+          "month": "2024-03",
+          "totalSales": 945713.48
+      },
+      {
+          "month": "2024-04",
+          "totalSales": 931965.37
+      },
+      {
+          "month": "2024-05",
+          "totalSales": 934720.7
+      },
+      {
+          "month": "2024-06",
+          "totalSales": 366933.71
+      }
+  ]
+};
+
