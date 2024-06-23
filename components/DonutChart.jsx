@@ -1,19 +1,23 @@
-// components/DonutChartComponent.jsx
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart, ArcElement, Title, Tooltip, Legend } from 'chart.js'; // Import necessary elements
+import { data } from '../data/data'; // Import your data
 
 // Register necessary elements
 Chart.register(ArcElement, Title, Tooltip, Legend);
 
 // Component definition
-const DonutChartComponent = () => {
-  const data = {
-    labels: ['Toys', 'Books', 'Electronics', 'Clothing'],
+const DonutChart = () => {
+  // Extracting data from your data structure
+  const labels = data.categorySales.map(item => item._id); // Extracting category names
+  const salesData = data.categorySales.map(item => item.totalSales); // Extracting total sales
+
+  const chartData = {
+    labels: labels,
     datasets: [
       {
         label: 'Sales by Category',
-        data: [2494284.72, 1251566.98, 650613.71, 639590.94],
+        data: salesData,
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -27,9 +31,13 @@ const DonutChartComponent = () => {
           'rgba(75, 192, 192, 1)',
         ],
         borderWidth: 1,
-      },
-    ],
-  };
+        
+      }]
+
+
+    };
+
+
 
   const options = {
     responsive: true,
@@ -40,15 +48,17 @@ const DonutChartComponent = () => {
       title: {
         display: true,
         text: 'Sales by Category',
+        color:'white',
       },
+
     },
   };
 
   return (
-    <div className='w-full md:col-span-1 relative lg:h-[70vh] h-[70vh] m-auto p-4 border rounded-lg bg-white'>
-      <Doughnut data={data} options={options} />
+    <div className='w-full md:col-span-1 relative lg:h-[70vh] h-[70vh] m-auto p-4 border rounded-lg border-gray-400 bg-gray-800 '>
+      <Doughnut data={chartData} options={options} />
     </div>
   );
 };
 
-export default DonutChartComponent;
+export default DonutChart;
