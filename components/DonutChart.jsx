@@ -2,18 +2,18 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart, ArcElement, Title, Tooltip, Legend } from 'chart.js'; // Import necessary elements
-
+import { data } from '../data/data';
 // Register necessary elements
 Chart.register(ArcElement, Title, Tooltip, Legend);
 
 // Component definition
 const DonutChartComponent = () => {
-  const data = {
-    labels: ['Toys', 'Books', 'Electronics', 'Clothing'],
+  const ChartData = {
+    labels: data.categorySales.map(d=>d.category ),
     datasets: [
       {
         label: 'Sales by Category',
-        data: [2494284.72, 1251566.98, 650613.71, 639590.94],
+        data: data.categorySales.map(d=>d.totalSales),
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -46,7 +46,7 @@ const DonutChartComponent = () => {
 
   return (
     <div className='w-full md:col-span-1 relative lg:h-[70vh] h-[70vh] m-auto p-4 border rounded-lg bg-white'>
-      <Doughnut data={data} options={options} />
+      <Doughnut data={ChartData} options={options} />
     </div>
   );
 };

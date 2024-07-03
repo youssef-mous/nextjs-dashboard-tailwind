@@ -8,6 +8,7 @@ const AreaChart = dynamic(() => import('../components/AreaChart'), { ssr: false 
 const LinearBarChart = dynamic(() => import('../components/HorizontalBarchart'), { ssr: false });
 const DonutChart = dynamic(() => import('../components/DonutChart'), { ssr: false });
 const BarChart = dynamic(() => import('../components/StackedBarChart'), { ssr: false });
+const MapChart= dynamic(() => import('../components/MapChart'), { ssr: false });
 export default function Home() {
   return (
     <>
@@ -21,10 +22,13 @@ export default function Home() {
         <Header />
         <div className='p-4 grid md:grid-cols-4 grid-cols-1 gap-4'>
           {/* <BarChart /> */}
+          <MapChart />
           <AreaChart />
           <DonutChart/>
+
           <LinearBarChart />
           <BarChart />
+         
         </div>
       </main>
     </>

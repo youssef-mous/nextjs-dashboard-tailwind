@@ -10,7 +10,7 @@ if (Chart.register) {
 
 const StackedBarChartComponent = () => {
   // Extract labels (country names) and total sales from data
-  const labels = data.countrySales.map(country => country.category);
+  const labels = data.countrySales.map(data =>data.location.country);
   const totalSalesData = data.countrySales.map(country => country.totalSales);
 
   // Data structure for chart.js
