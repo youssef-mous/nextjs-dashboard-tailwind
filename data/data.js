@@ -19,10 +19,10 @@ export const data ={
             "quantitySold": 6112
         },
         {
-            "_id": "P005",
-            "avgPrice": 249.99,
-            "totalSales": 1492190.31,
-            "quantitySold": 5969
+            "_id": "P001",
+            "avgPrice": 699.99,
+            "totalSales": 4057842.03,
+            "quantitySold": 5797
         },
         {
             "_id": "P004",
@@ -31,16 +31,16 @@ export const data ={
             "quantitySold": 5756
         },
         {
+            "_id": "P005",
+            "avgPrice": 249.99,
+            "totalSales": 1492190.31,
+            "quantitySold": 5969
+        },
+        {
             "_id": "P003",
             "avgPrice": 199.99,
             "totalSales": 1254137.29,
             "quantitySold": 6271
-        },
-        {
-            "_id": "P001",
-            "avgPrice": 699.99,
-            "totalSales": 4057842.03,
-            "quantitySold": 5797
         }
     ],
     "categorySales": [
@@ -53,7 +53,49 @@ export const data ={
             "totalSales": 2746327.6
         }
     ],
-    "countrySales": [
+    "SalesbyCountry": [
+        {
+            "totalSales": 7799.9400000000005,
+            "location": "New Cynthia, Liberia"
+        },
+        {
+            "totalSales": 6599.92,
+            "location": "West Michaelchester, Oman"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Lake Abigailstad, Jersey"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Vincentville, Micronesia"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Brianchester, Turkmenistan"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Haleymouth, Somalia"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "New Danielshire, Germany"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "New Juliatown, Ukraine"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Jamesfurt, United States Minor Outlying Islands"
+        },
+        {
+            "totalSales": 6499.95,
+            "location": "Davidside, Pakistan"
+        }
+    ],
+    "monthlyTotalSales": [
         {
             "_id": "2024-05",
             "totalSales": 12389764.41
@@ -63,5 +105,5 @@ export const data ={
             "totalSales": 7540286.54
         }
     ]
-  }
+};
   

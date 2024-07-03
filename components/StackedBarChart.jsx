@@ -5,13 +5,13 @@ import {data} from "../data/data"
 Chart.register(Title, Tooltip, Legend, CategoryScale, LinearScale, BarElement);
 
 const StackedBarChartComponent = () => {
-  const labels = data.countrySales.map(country => country._id);
+  const labels = data.SalesbyCountry.map(country => country.location);
   const chartData = {
     labels: labels,
     datasets: [
       {
         label: 'Total Sales',
-        data: data.countrySales.map(country => country.totalSales),
+        data: data.SalesbyCountry.map(country => country.totalSales),
         backgroundColor: 'rgba(235, 54, 54, 0.6)',
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1,
