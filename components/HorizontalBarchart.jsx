@@ -1,9 +1,8 @@
 // components/Horizontal.js
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { data } from '../data/data';
 
-const LinearBarChart = () => {
+const LinearBarChart = ({data}) => {
   const productSalesChartData = {
     labels: data.productSales.map(product => product.productName),
     datasets: [

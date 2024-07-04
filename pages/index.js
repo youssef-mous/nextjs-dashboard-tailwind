@@ -8,9 +8,25 @@ const AreaChart = dynamic(() => import('../components/AreaChart'), { ssr: false 
 const LinearBarChart = dynamic(() => import('../components/HorizontalBarchart'), { ssr: false });
 const DonutChart = dynamic(() => import('../components/DonutChart'), { ssr: false });
 const BarChart = dynamic(() => import('../components/StackedBarChart'), { ssr: false });
-const MapChart= dynamic(() => import('../components/MapChart'), { ssr: false });
-export default function Home() {
-  return (
+const Mapchart=dynamic(()=>import('../components/MapChart'),{ssr:false} );
+import { fetchData } from '../utils/fetchData';
+
+export async function getServerSideProps() {
+  const data = await fetchData();
+
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+export default function Home({data}) {
+    if (!data) {
+    return <div>Error loading data</div>;
+  }
+
+ return (
     <>
       <Head>
         <title>Create Next App</title>
@@ -18,19 +34,17 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='bg-gray-100 min-h-screen'>
+      <main className='bg-gray-700 min-h-screen'>
         <Header />
         <div className='p-4 grid md:grid-cols-4 grid-cols-1 gap-4'>
-          {/* <BarChart /> */}
-          <MapChart />
-          <AreaChart />
-          <DonutChart/>
-
+          <Mapchart/>
+          <AreaChart data={data}/>
+          <DonutChart data={data}/>
           <LinearBarChart />
           <BarChart />
-         
         </div>
       </main>
-    </>
-  );
+   </>
+ );
+ 
 }

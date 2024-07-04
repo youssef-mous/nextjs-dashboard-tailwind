@@ -2,12 +2,12 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart, ArcElement, Title, Tooltip, Legend } from 'chart.js'; // Import necessary elements
-import { data } from '../data/data';
+
 // Register necessary elements
 Chart.register(ArcElement, Title, Tooltip, Legend);
 
 // Component definition
-const DonutChartComponent = () => {
+const DonutChartComponent = ({data}) => {
   const ChartData = {
     labels: data.categorySales.map(d=>d.category ),
     datasets: [

@@ -1,7 +1,6 @@
 // components/ChartComponent.js
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { data } from '../data/data';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -25,7 +24,7 @@ ChartJS.register(
   Filler
 );
 
-const AreaChartComponent = () => {
+const AreaChartComponent = ({data}) => {
   const chartData = {
     labels: data.monthlySales.map(d => d.month),
     datasets: [
